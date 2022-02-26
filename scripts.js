@@ -20,7 +20,7 @@ const pallindrone = (word) => {
 const isItSo = pallindrone('racecar');
 console.log(isItSo);
 
-// define a function that takes an array of strings and returns the most commonly occuring string in the array (reduce method?)
+// define a function that takes an array of strings and returns the most commonly occuring string in the array
 
 const mostWords = (array) => {
     const wordObj = {}; // this will house the words as keys with the amount of the word to be the value
@@ -28,7 +28,7 @@ const mostWords = (array) => {
     let mostWord = []; // this array will contain the string that occurs the most in the array
 
     array.forEach(word => {
-        // if the wordObj have a key that exists with that word? If no, add it as a key with a value of 1; if yes, increase the value by one;
+        // does the wordObj have a key that exists with that word? If no, add it as a key with a value of 1; if yes, increase the value by one;
         if(!wordObj[word]) {
             wordObj[word] = 1;
         } else {
@@ -49,3 +49,27 @@ const mostWords = (array) => {
 
 const theMostWord = mostWords(['all', 'the', 'time', 'eye', 'all', 'all', 'time', 'eye', 'all']);
 console.log(theMostWord);
+
+
+const reverse = (string => {
+    const reversedString = string.split(' ').reverse().join(' ');
+    console.log(reversedString)
+})
+
+reverse('I love Soca!')
+
+// Define a function that takes a string and returns the num of vowels
+
+const numOfVowels = word => {
+    const vowels = 'aeiouy';
+    let counter = 0;
+    const wordToLower = word.toLowerCase() //error handling
+    for (let i in wordToLower) {
+        if(vowels.includes(wordToLower[i])) counter ++
+        
+    }
+    return counter
+
+}
+    console.log(numOfVowels('aeoiasdyhkjahg'));
+    
